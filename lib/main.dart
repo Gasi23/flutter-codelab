@@ -11,8 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Bem-vindo ao Flutter')),
-        body: const Center(child: Text('Olá, Mundo!')),
+        appBar: AppBar(title: const Text('Flutter em Ação')),
+        body: const Center(
+          child: Text(
+            'Olá, Universo!',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ),
+        backgroundColor: Colors.lightBlueAccent, // Alteração de cor do fundo
       ),
     );
   }
