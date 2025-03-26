@@ -12,13 +12,31 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter em Ação')),
-        body: const Center(
-          child: Text(
-            'Olá, Universo!',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Clique no botão abaixo!',
+                style: TextStyle(fontSize: 20),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  // Função do botão
+                  showDialog(
+                    context: context,
+                    builder:
+                        (context) => AlertDialog(
+                          content: const Text('Você clicou no botão!'),
+                        ),
+                  );
+                },
+                child: const Text('Clique aqui!'),
+              ),
+            ],
           ),
         ),
-        backgroundColor: Colors.lightBlueAccent, // Alteração de cor do fundo
+        backgroundColor: Colors.lightBlueAccent,
       ),
     );
   }
